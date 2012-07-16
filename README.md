@@ -6,7 +6,7 @@ Install EKInspect and apply EKInspect.diff, then add this folder to your AddOns 
 
 #How to Use
 
-The slash command `/noggbg` will print stats to the default chat frame. Checking player resilience takes some time so you may have to try the command a few times before the player resilience stats are accurage. `/noggbg c` will announce stats to battleground chat.
+The slash command `/noggbg` will print stats to the default chat frame. Checking player resilience takes some time so you may have to try the command a few times before the player resilience stats are accurate. `/noggbg c` will announce stats to battleground chat.
 
 #License
 Copyright (c) 2012, Nick Booher <njbooher@gmail.com>
