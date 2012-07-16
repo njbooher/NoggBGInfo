@@ -1,0 +1,7 @@
+## Interface: 40300
+## Title: NoggBGInfo
+## Notes: 
+## Author: Nick
+## SavedVariables: 
+## Dependencies: EkInspect
+NoggBGInfo.lua
