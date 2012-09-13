@@ -24,7 +24,8 @@ local role = {
         },
         DRUID = {
           Balance       = "Ranged",
-          ["Feral Combat"]  = "Feral",
+          Feral         = "Melee",
+          Guardian      = "Tank",
           Restoration   = "Healer"
         },
         HUNTER = {
@@ -92,7 +93,6 @@ function NoggBGInfo.bgList(bgChat)
       Ranged = 0,
       Healer = 0,
       Tank   = 0,
-      Feral  = 0,
       Foreign = 0,
       none   = 0
     },
@@ -101,7 +101,6 @@ function NoggBGInfo.bgList(bgChat)
       Ranged = 0,
       Healer = 0,
       Tank   = 0,
-      Feral  = 0,
       Foreign = 0,
       none   = 0
     }
@@ -180,8 +179,8 @@ function NoggBGInfo.bgList(bgChat)
     
   end
   
-  local hordeMessage = string.format("Horde: %i Feral Druids, %i Tanks, %i Healers, %i Ranged, %i Melee, %i ESL", totals.Horde.Feral, totals.Horde.Tank, totals.Horde.Healer, totals.Horde.Ranged, totals.Horde.Melee, totals.Horde.Foreign)
-  local allyMessage = string.format("Alliance: %i Feral Druids, %i Tanks, %i Healers, %i Ranged, %i Melee, %i ESL", totals.Alliance.Feral, totals.Alliance.Tank, totals.Alliance.Healer, totals.Alliance.Ranged, totals.Alliance.Melee, totals.Alliance.Foreign)
+  local hordeMessage = string.format("Horde: %i Tanks, %i Healers, %i Ranged, %i Melee, %i ESL", totals.Horde.Tank, totals.Horde.Healer, totals.Horde.Ranged, totals.Horde.Melee, totals.Horde.Foreign)
+  local allyMessage = string.format("Alliance: %i Tanks, %i Healers, %i Ranged, %i Melee, %i ESL", totals.Alliance.Tank, totals.Alliance.Healer, totals.Alliance.Ranged, totals.Alliance.Melee, totals.Alliance.Foreign)
   
   if bgChat then
     SendChatMessage(hordeMessage, "BATTLEGROUND")
@@ -192,7 +191,7 @@ function NoggBGInfo.bgList(bgChat)
     end
     
     if #lowResil > 0 then
-      SendChatMessage("Horde players with <1000 resil: " .. strjoin(", ", unpack(lowResil)), "BATTLEGROUND")
+      SendChatMessage("Horde players with <1000 resil: " .. tostring(#lowResil) , "BATTLEGROUND")
     end
     
   else
