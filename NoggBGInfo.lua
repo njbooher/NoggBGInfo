@@ -38,6 +38,11 @@ local role = {
           Fire          = "Ranged",
           Frost         = "Ranged"
         },
+        MONK = {
+          Brewmaster    = "Tank",
+          Mistweaver    = "Healer",
+          Windwalker    = "Melee",
+        },
         PALADIN = {
           Holy          = "Healer",
           Protection    = "Tank",
