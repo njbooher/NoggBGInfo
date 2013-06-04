@@ -188,15 +188,15 @@ function NoggBGInfo.bgList(bgChat)
   local allyMessage = string.format("Alliance: %i Tanks, %i Healers, %i Ranged, %i Melee, %i ESL", totals.Alliance.Tank, totals.Alliance.Healer, totals.Alliance.Ranged, totals.Alliance.Melee, totals.Alliance.Foreign)
   
   if bgChat then
-    SendChatMessage(hordeMessage, "BATTLEGROUND")
-    SendChatMessage(allyMessage, "BATTLEGROUND")
+    SendChatMessage(hordeMessage, "INSTANCE_CHAT")
+    SendChatMessage(allyMessage, "INSTANCE_CHAT")
     
     if printAlliancePremade then
-      SendChatMessage("Possible Alliance premade, 4 or more from " .. strjoin(", ", unpack(premadeRealms["Alliance"])), "BATTLEGROUND")
+      SendChatMessage("Possible Alliance premade, 4 or more from " .. strjoin(", ", unpack(premadeRealms["Alliance"])), "INSTANCE_CHAT")
     end
     
     if #lowResil > 0 then
-      SendChatMessage("Horde players with <1000 resil: " .. tostring(#lowResil) , "BATTLEGROUND")
+      SendChatMessage("Horde players with <1000 resil: " .. tostring(#lowResil) , "INSTANCE_CHAT")
     end
     
   else
