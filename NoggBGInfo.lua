@@ -80,7 +80,7 @@ local bgForeign = {
   "Gallywix",
   "Goldrinn",
   "Nemesis",
-  "Tol Barad",
+  "TolBarad",
   "Drakkari",
   "Quel'Thalas",
   "Ragnaros"
