@@ -136,7 +136,7 @@ function NoggBGInfo.bgList(bgChat)
       end
     end
     
-    if talentSpec then
+    if classToken and talentSpec then
       totals[tableFaction][role[classToken][talentSpec]] = totals[tableFaction][role[classToken][talentSpec]] + 1
     else
       totals[tableFaction].none = totals[tableFaction].none + 1
